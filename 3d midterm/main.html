@@ -6,19 +6,52 @@
     <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'/>
 </head>
 <body>
-<script>
-    document.getElementById('navType').setAttribute("type", "game");
-    
-</script>
+
 <x3d width='100%' height='100%'>
     <scene>
             <navigationInfo type='"walk" "any"' id="navType" speed='3.5' walkDamping='4.0' transitionTime='0.5' 
-            avatarSize='[ 0.20, 1.2, 0.60 ]' headlight= "false" ></navigationInfo>
-            <viewpoint position="-1.94639 1.79771 -2.89271" orientation="0.03886 0.99185 0.12133 3.75685"></viewpoint>
-            <Inline mapDEFToID="false" url="Midterm_House.x3d" />
+            avatarSize='[ 0.3, 1.5, 0.6 ]' headlight= "false" ></navigationInfo>
+            <viewpoint position="10 3 0" orientation="0.03886 0.99185 0.12133 3.75685"></viewpoint>
+            <Inline nameSpaceName="filename" mapDEFToID="true"  url="Midterm_House.x3d" />
             
            
     </scene>
 </x3d>
+
+<div>
+    <button onclick="changeSofa()">Change Texture</button>
+</div>
+<script>
+    function changeSofa()
+    {
+        if(document.getElementById('MA_Texture_003').getAttribute("url")!= "img/sofa.jpg")
+            document.getElementById('MA_Texture_003').setAttribute("url", "img/sofa.jpg");
+        else
+            document.getElementById('MA_Texture_003').setAttribute("url", "img/sofatext2.jpg");
+    }
+</script>
+<!--Kaynak
+wood.jpg - https://img.freepik.com/free-photo/brown-wood-textured-background-with-design-space_53876-160414.jpg
+countertop1.jpg - https://cdn.shopify.com/s/files/1/1563/9289/articles/cherry-butcher-block_960x.jpg?v=1500567086
+parquet.jpg - https://media.istockphoto.com/id/645860706/photo/white-wood-texture-seamless-wood-floor-texture.jpg?s=612x612&w=0&k=20&c=0NLxXt47Q9SFsOuyIFfPUkswZ3L9VK6ET9plyxl4p0g=
+baza.jpg - https://media.istockphoto.com/id/639703130/tr/foto%C4%9Fraf/texture-of-genuine-leather-cream-color-background-surface.jpg?s=170667a&w=0&k=20&c=EttWgFdoT6jQAuD0C8VHU5ITwRhhExoUvAaXZNry-J8=
+yorgan.jpg - https://media.istockphoto.com/id/508630111/photo/white-canvas-background.jpg?s=612x612&w=0&k=20&c=GX19E7c22KbvdoZQreb7BhaLXbP9mEF0IhmhsRnEdL0=
+pillow.jpg - https://i.pinimg.com/originals/91/8c/d2/918cd28fc7b6b32219e74b7ad5b1b690.jpg
+book.jpg - https://t3.ftcdn.net/jpg/00/05/32/84/360_F_5328454_nUADyyNmfid2qzgZv9O8SlcQuQMrJj9x.jpg
+book-side.jpg -https://t4.ftcdn.net/jpg/00/05/32/83/360_F_5328391_nfLRyUUdYTV6UkryIeVnTmXfWrCPmeRQ.jpg
+lamp.jpg - https://media.istockphoto.com/id/153736677/tr/foto%C4%9Fraf/lamp-shade-texture.jpg?s=170667a&w=0&k=20&c=tKVN9fkeQg6d_M_SGf8j6CpP0jXJdz5LFv-UpxZcV3k=
+lamp-shade.jpg - https://thumbs.dreamstime.com/b/lamp-texture-3202262.jpg
+book2.jpg - https://media.istockphoto.com/id/594924518/photo/weathered-color-textile-book-cover-texture.jpg?s=612x612&w=0&k=20&c=34rfB9sqR9XI2pAF0dMVlSX1xv0H3Bygegr11D_Wfi8=
+book3.jpg - https://media.istockphoto.com/id/182479258/photo/book-cover-texture.jpg?s=612x612&w=0&k=20&c=dsfFx7AKX6WElaeEiTHL61Gf3fZCTEwjvxcDtUsf_48=
+book4.jpg - https://live.staticflickr.com/4037/4173643534_7e833bd10a_b.jpg
+wall.jpg - https://storage.cloudconvert.com/tasks/ada8ee59-4bf0-4b54-861d-a09b1c85ab14/black-smooth-textured-paper_53876-96064.jpg?AWSAccessKeyId=cloudconvert-production&Expires=1681686095&Signature=4FqVY81CHJlYdnd4fgcBsVHOlIw%3D&response-content-disposition=attachment%3B%20filename%3D%22black-smooth-textured-paper_53876-96064.jpg%22&response-content-type=image%2Fjpeg
+balcony_wall.jpg - https://www.ankasanat.com/cadence-hybrid-acrylic-for-multisurfaces-tum-yuzeyler-icin-akrilik-boya-120ml-h007-acik-sari-sanat-malzemeleri-cadence-47979-67-K.jpg
+chair.jpg - https://storage.cloudconvert.com/tasks/7c24a861-fad7-4a3d-a994-6e4e2c8a8f46/chair.jpg?AWSAccessKeyId=cloudconvert-production&Expires=1681684556&Signature=ZAWFrGz5wWR63V80QFmk%2F0OHfEY%3D&response-content-disposition=attachment%3B%20filename%3D%22chair.jpg%22&response-content-type=image%2Fjpeg
+balcony_floor.jpg - https://i.pinimg.com/736x/a6/89/3b/a6893b1ae9af166f5dcb9244eccdc455--tile-texture-ds-max.jpg
+switch.jpg - https://storage.cloudconvert.com/tasks/028704a3-6cb8-4d57-a71f-c081c9a81b08/switch.jpg?AWSAccessKeyId=cloudconvert-production&Expires=1681685369&Signature=CMd3TPqCWKodvXhuZrlZWn46kKQ%3D&response-content-disposition=attachment%3B%20filename%3D%22switch.jpg%22&response-content-type=image%2Fjpeg
+sofatext2 -https://topfabric.com/products/woven-textured-home-decor-fabric-bond
+web3d.org
+x3dom.org-->
+
 </body>
 </html>
